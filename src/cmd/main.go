@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import "CarSellsProject/api"
 
 func main() {
-	fmt.Printf("Hello World\n")
+
+	api.InitServer()
+
 }
