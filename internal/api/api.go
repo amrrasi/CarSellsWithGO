@@ -6,20 +6,16 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func InitServer() {
-
+func InitServer() error {
 	r := gin.New()
 	r.Use(gin.Recovery(), gin.Logger())
 
 	v1 := r.Group("api/v1")
 	{
 		v1.GET("/health", func(c *gin.Context) {
-			c.JSON(http.StatusOK, "Working!")
-			return
+			c.JSON(http.StatusOK, gin.H{"status": "ok"})
 		})
 	}
 
-	r.Run(":5005")
+	return r.Run(":5005")
 }
-
-

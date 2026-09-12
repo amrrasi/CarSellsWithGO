@@ -1,0 +1,16 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Environment
+.env
+*.env.local
+
+# Build
+/bin/
+*.exe
+*.out
+
+# Go
+vendor/

@@ -1,6 +1,6 @@
 package main
 
-import "CarSellsProject/api"
+import "CarSellsProject/src/api"
 
 func main() {
 
